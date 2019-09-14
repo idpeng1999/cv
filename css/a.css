@@ -10,6 +10,9 @@ a{
     margin: 0px;
     padding: 0px;
 }
+ul,ol{
+    list-style: none;
+}
 hr{
     height: 0;
     border: none;
@@ -185,6 +188,53 @@ p.selfIntroduction{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    font-family: "kai";
     line-height: 1.8;
     font-size: 18px;
+}
+
+section.skills{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+section.skills>h2{
+    text-align: center;
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+section.skills h3{
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+    font-weight: normal;
+}
+section.skills>ol{
+    background: white;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+    padding: 42px 50px 10px;
+    margin-top: 30PX;
+}
+section.skills>ol>li{
+    float: left;
+    width: 48%;
+    box-sizing: border-box;
+}
+section.skills>ol>li:nth-child(even){
+    float: right;
+}
+section.skills .progressBar{
+    height: 5px;
+    background: #fae1e1;
+    border-radius: 3px;
+    margin: 4px 0 40px;
+}
+section.skills .progressBar .progress{
+    height: 100%;
+    background: #e6686a;
+    width: 70%;
+    border-radius: 3px;
 }
