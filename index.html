@@ -109,7 +109,7 @@
                         无1
                     </h3>
                         <div class="progressBar">
-                            <div class="progress"></div>
+                            <div class="progress" style="width: 42%"></div>
                         </div> 
             </li>
             <li>
@@ -117,7 +117,7 @@
                         无2
                 </h3>
                         <div class="progressBar">
-                            <div class="progress"></div>
+                            <div class="progress" style="width: 64%"></div>
                         </div> 
             </li>
             <li>
@@ -125,7 +125,7 @@
                         无3
                 </h3>
                         <div class="progressBar">
-                            <div class="progress"></div>
+                            <div class="progress" style="width: 72%"></div>
                         </div> 
             </li>
             <li>
@@ -133,7 +133,7 @@
                         无4
                 </h3>
                         <div class="progressBar">
-                            <div class="progress"></div>
+                            <div class="progress" style="width: 22%"></div>
                         </div> 
             </li>
             <li>
@@ -141,7 +141,7 @@
                         无5
                 </h3>
                         <div class="progressBar">
-                            <div class="progress"></div>
+                            <div class="progress" style="width: 12%"></div>
                         </div> 
             </li>
             <li>
@@ -149,24 +149,45 @@
                         无6
                 </h3>
                         <div class="progressBar">
-                            <div class="progress"></div>
+                            <div class="progress" style="width: 22%"></div>
                         </div> 
             </li>
         </ol>
     </section>
-    <section>
+    <section class="porfolio">
         <h2>作品集</h2>
         <nav>
-            <ol>
-                <li>无7</li>
-                <li>无8</li>
-                <li>无9</li>
+            <ol class="clearfix">
+                <li id="portfolio1">所有</li>
+                <li id="portfolio2">无无无无无</li>
+                <li id="portfolio3">无无</li>
             </ol>
+            <div id="portfolioBar" class="bar state-1">
+                <div class="bar-inner"></div>
+            </div>
         </nav>
-        <div class="jobs">
-                <div class="big"></div>
-                <div class="small"></div>
+        <script>
+            portfolio1.onclick= function(){
+                portfolioBar.className = 'bar state-1'
+            } 
+            portfolio2.onclick= function(){
+                portfolioBar.className = 'bar state-2'
+            } 
+            portfolio3.onclick= function(){
+                portfolioBar.className = 'bar state-3'
+            } 
+        </script>
+        <div class="works" style="height: 597px">
+                <div class="big" style="top: 0; left:0;">
+                    <img src="./img/1.jpg" alt="作品1">
+                </div>
+                <div class="small" style="top: 0; left:645px;">
+                    <img src="./img/2.jpg" alt="作品2">
+                </div>
+                <div class="small" style="top: 312px; left:645px;">
+                    <img src="./img/3.jpg" alt="作品3">
+                </div>
         </div>
-    </section>
+    </section> 
 </body>
 </html>
