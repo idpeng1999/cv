@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>邓鹏的个人资料</title>
+    <title>憨憨的个人资料</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/loading.css">
     <script src="//at.alicdn.com/t/font_1410543_qjtgi0baluq.js"></script>
@@ -37,7 +37,7 @@
     <div id="sitewelcome" class="site-welcome active" > 
         <div class="loading"></div>
     </div>    
-    <div class="topNavBar " >
+    <div id="topNavBar" class="topNavBar" >
         <div class="topNavBar-inner clearfix">
                 <a class="logo" href="#" alt="logo" style="float:left">
                         <span class="RS">RS</span><span class="card">card</span>
@@ -51,7 +51,12 @@
                                 <a href="#">技能</a> 
                             </li>
                             <li>
-                                <a href="#">作品</a> 
+                                <a href="#">作品</a>
+                                <ul class="submenu">
+                                    <li>作品1</li>
+                                    <li>作品2</li> 
+                                    <li>作品3</li>  
+                                </ul>
                             </li>
                             <li>
                                 <a href="#">博客</a> 
@@ -82,7 +87,7 @@
                 <span class="welcome">Hello
                     <span class="triangle"></span>
                 </span>
-                    <h1>邓鹏</h1>
+                    <h1>憨憨</h1>
                     <p>哈哈哈哈哈</p>
                     <hr>
                     <dl>
@@ -213,6 +218,13 @@
         setTimeout(function() {
             sitewelcome.classList.remove('active')
         }, 1000);
+        window.onscroll = function(){ 
+            if(window.scrollY>0){
+                topNavBar.classList.add('sticky') 
+            }else{
+                topNavBar.classList.remove('sticky') 
+            }
+        }
     </script>
 </body>
 </html>
