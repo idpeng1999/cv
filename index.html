@@ -51,7 +51,7 @@
                                 <a href="#">技能</a> 
                             </li>
                             <li>
-                                <a href="#">作品</a>
+                                <a class="menuTigger" href="#">作品</a>
                                 <ul class="submenu">
                                     <li>作品1</li>
                                     <li>作品2</li> 
@@ -59,7 +59,12 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">博客</a> 
+                                <a class="menuTigger" href="#">博客</a> 
+                                <ul class="submenu">
+                                    <li>博客1</li>
+                                    <li>博客2</li> 
+                                    <li>博客3</li>  
+                                </ul>
                             </li>
                             <li>
                                 <a href="#">日历</a> 
@@ -123,7 +128,7 @@
     <p class="downloadResume-wrapper" >
         <a class="downloadResume" href="./resume.pdf" download >下载PDF简历</a>
     </p>
-        <p class="selfIntroduction">邓鹏,平顶山学院在校大学生<br>
+        <p class="selfIntroduction">憨憨,平顶山学院在校大学生<br>
             现在正在学习</p>
     </main> 
     <section class="skills">
@@ -223,6 +228,19 @@
                 topNavBar.classList.add('sticky') 
             }else{
                 topNavBar.classList.remove('sticky') 
+            }
+        }
+        let aTags = document.getElementsByClassName('menuTigger')
+        for(let i =0 ; i<aTags.length ; i++){
+            aTags[i].onmouseenter = function(x){
+                let a = x.currentTarget
+                let brother = a.nextSibling
+                while(brother.nodeType !== 'UL'){
+                    brother = brother.nextSibling
+                }
+            }
+            aTags[i].onmouseleave = function(x){
+
             }
         }
     </script>
