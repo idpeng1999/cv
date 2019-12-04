@@ -107,7 +107,7 @@ hr {
     top: 100%;
     background: white;
     color: #3d4451;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5); //没显示阴影（没找出为啥
+    box-shadow: 0 0 5px rgba(0,0,0,0.5); 
 }
 .topNavBar li.active > .submenu{
     display: block;
