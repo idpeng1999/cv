@@ -81,7 +81,7 @@ hr {
     position: relative;
 }
 
-.topNavBar nav>ul>li>a:hover::after {
+.topNavBar nav>ul>li.active>a::after {
     content: '';
     display: ruby;
     position: absolute;
@@ -101,16 +101,29 @@ hr {
     }
 }
 .topNavBar .submenu{
-    display: active;
+    display: none;
     position: absolute;
-    left: 0;
+    right: -18px;
     top: 100%;
+    background: white;
+    color: #3d4451;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5); //没显示阴影（没找出为啥
 }
-.topNavBar .submenu.active{
+.topNavBar li.active > .submenu{
     display: block;
+    animation: submenuSlide 0.3s;
+}
+@keyframes submenuSlide{
+    0%{
+        transform: translateX(-50%);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 .topNavBar .submenu>li{
     white-space: nowrap;
+    padding: 5px 10px;
 }
 .topNavBar .logo {
     font-size    : 24px;
